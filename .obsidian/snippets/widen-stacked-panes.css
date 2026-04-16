@@ -1,0 +1,4 @@
+/* Widen stacked tabs panes */
+.workspace-tab-container.mod-stacked .workspace-leaf {
+    width: 1000px !important; /* Adjust this value to your desired width */
+}

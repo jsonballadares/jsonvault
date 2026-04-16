@@ -1,0 +1,58 @@
+/* ============================================
+   Custom Callout Types — Catppuccin Frappe
+   Complement the AnuPpuccin theme palette
+   ============================================ */
+
+/* --- Vault Stats (Lavender) --- */
+.callout[data-callout="vault-stats"] {
+  --callout-color: 186, 187, 241;
+  --callout-icon: lucide-bar-chart-3;
+}
+
+/* --- Inbox (Yellow) --- */
+.callout[data-callout="inbox"] {
+  --callout-color: 229, 200, 144;
+  --callout-icon: lucide-inbox;
+}
+
+/* --- Literature (Sapphire) --- */
+.callout[data-callout="literature"] {
+  --callout-color: 133, 193, 220;
+  --callout-icon: lucide-book-open;
+}
+
+/* --- Permanent (Green) --- */
+.callout[data-callout="permanent"] {
+  --callout-color: 166, 209, 137;
+  --callout-icon: lucide-gem;
+}
+
+/* --- Archive (Mauve) --- */
+.callout[data-callout="archive"] {
+  --callout-color: 202, 158, 230;
+  --callout-icon: lucide-archive;
+}
+
+/* --- Calendar Stats (Peach) --- */
+.callout[data-callout="calendar-stats"] {
+  --callout-color: 239, 159, 118;
+  --callout-icon: lucide-calendar-days;
+}
+
+/* --- Wiki Navigation (Teal) --- */
+.callout[data-callout="wiki-nav"] {
+  --callout-color: 129, 200, 190;
+  --callout-icon: lucide-book-marked;
+}
+
+/* --- Generic Navigation (Pink) --- */
+.callout[data-callout="nav"] {
+  --callout-color: 244, 184, 228;
+  --callout-icon: lucide-compass;
+}
+
+/* --- Recently Modified (Blue) --- */
+.callout[data-callout="recent"] {
+  --callout-color: 140, 170, 238;
+  --callout-icon: lucide-clock;
+}

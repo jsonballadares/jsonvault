@@ -1,0 +1,96 @@
+/* ============================================
+   Dashboard Layout — Dashboard++ Inspired
+   Scoped to notes with cssclasses: dashboard
+   ============================================ */
+
+/* --- Full-width layout --- */
+.dashboard .markdown-preview-section {
+  max-width: 100%;
+}
+
+.dashboard .markdown-source-view .cm-sizer {
+  max-width: 100%;
+}
+
+/* --- List-to-column flexbox layout --- */
+/* Turns top-level <ul> under headings into a flex row */
+.dashboard div > ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.dashboard div > ul > li {
+  min-width: 250px;
+  flex: 1 1 250px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  transition: border-color 0.2s ease;
+}
+
+.dashboard div > ul > li:hover {
+  border-color: var(--interactive-accent);
+}
+
+/* Hide parent bullet markers */
+.dashboard div > ul > li > .list-bullet {
+  display: none !important;
+}
+
+/* Style nested list items (descriptions under links) */
+.dashboard div > ul > li > ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.25rem;
+  opacity: 0.75;
+  font-size: 0.9em;
+}
+
+.dashboard div > ul > li > ul > li > .list-bullet {
+  display: none !important;
+}
+
+/* --- Heading separators --- */
+.dashboard h1 {
+  border-bottom: 1px dotted var(--background-modifier-border);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dashboard h2 {
+  margin-top: 1.5rem;
+}
+
+/* --- Dataview table polish --- */
+.dashboard .dataview.table-view-table {
+  margin-top: 0.5rem;
+}
+
+/* --- Horizontal rule as subtle divider --- */
+.dashboard hr {
+  border: none;
+  border-top: 1px solid var(--background-modifier-border);
+  margin: 1.5rem 0;
+}
+
+/* --- Fix bold link visibility (Obsidianite gradient override) --- */
+.dashboard div > ul > li > strong .internal-link,
+.dashboard div > ul > li > strong .external-link,
+.dashboard div > ul > li > strong a {
+  -webkit-text-fill-color: var(--text-accent);
+  background-image: none !important;
+}
+
+/* --- Mobile: stack columns on phones --- */
+.is-phone .dashboard div > ul {
+  flex-direction: column;
+}
+
+.is-phone .dashboard div > ul > li {
+  min-width: 100%;
+}

@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": ["WebFetch", "WebSearch"],
+    "deny": []
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "content=$(cat \"AI OS/me.md\" | jq -Rs .) && printf '{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":%s}}' \"$content\"",
+            "statusMessage": "Loading AI OS configuration..."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); [ -z \"$f\" ] && echo '{}' && exit 0; b=$(basename \"$f\"); case \"$b\" in .env.example) echo '{}' ;; .env|.env.*) echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Reading .env files is blocked for security\"}}' ;; *) echo '{}' ;; esac"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+.DS_Store
+.obsidian/workspace*.json
+.obsidian/graph*.json.bak
+.claude/settings.local.json
+.claude/memory/
+AI OS/Codebase/*/venv/
+AI OS/Codebase/*/.venv/
+AI OS/Codebase/*/.env

@@ -1,0 +1,42 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "trashOption": "local",
+  "spellcheck": true,
+  "userIgnoreFilters": [
+    "Templates/"
+  ],
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Notes",
+  "showLineNumber": true,
+  "readableLineLength": true,
+  "showFrontmatter": true,
+  "mobilePullAction": "editor:configure-toolbar",
+  "attachmentFolderPath": "Images",
+  "vimMode": false,
+  "mobileToolbarCommands": [
+    "editor:undo",
+    "editor:redo",
+    "insert-template",
+    "editor:insert-wikilink",
+    "editor:insert-embed",
+    "editor:insert-tag",
+    "editor:attach-file",
+    "editor:set-heading",
+    "editor:toggle-bold",
+    "editor:toggle-italics",
+    "editor:toggle-strikethrough",
+    "editor:toggle-highlight",
+    "editor:toggle-code",
+    "editor:toggle-blockquote",
+    "editor:insert-link",
+    "editor:toggle-bullet-list",
+    "editor:toggle-numbered-list",
+    "editor:toggle-checklist-status",
+    "editor:indent-list",
+    "editor:unindent-list",
+    "editor:configure-toolbar"
+  ]
+}

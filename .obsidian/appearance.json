@@ -1,0 +1,12 @@
+{
+  "baseFontSize": 17,
+  "translucency": true,
+  "cssTheme": "Obsidianite",
+  "enabledCssSnippets": [
+    "dashboard",
+    "custom-callouts"
+  ],
+  "accentColor": "#ffc800",
+  "theme": "obsidian",
+  "nativeMenus": false
+}
