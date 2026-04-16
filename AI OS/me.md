@@ -62,6 +62,21 @@ Body content here...
 
 Index/wiki notes add `up:: [[Parent]]` as the first line. Literature notes add `author::` and `source::` fields.
 
+## AI OS Workflow
+
+The vault's AI OS layer follows the six-stage pattern from [Andrej Karpathy's LLM Knowledge Bases gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). Each stage maps onto a folder; stages are optional and can be adopted incrementally.
+
+| Stage | Where It Lives | Status |
+|---|---|---|
+| **Data ingest** — external sources compiled into structured notes | `AI OS/Knowledge Base/Sources/` | Empty scaffolding |
+| **IDE** — Obsidian as the frontend for raw, compiled, and derived content | Vault root, viewed in Obsidian | Active |
+| **Q&A** — agent answers questions by reading across the vault and KB | Invoked via Claude Code or other agent | Active |
+| **Output** — answers rendered as new notes, slides, or images and filed back | `Notes/` or `AI OS/Knowledge Base/` | Active (manual) |
+| **Linting** — agent-run health checks: inconsistencies, missing connections, stale notes | `AI OS/Skills/` (e.g., a mining skill) | Empty scaffolding |
+| **Extra tools** — CLIs that extend what the agent can do against the vault | `AI OS/Codebase/` | Empty scaffolding |
+
+Human-authored notes (in `Notes/`) and agent-authored KB notes (in `AI OS/Knowledge Base/`) coexist — see [[Vault Schema Reference]] for authorship rules.
+
 ## Vault Reference
 
 Read these wiki notes when you need specifics on conventions:
