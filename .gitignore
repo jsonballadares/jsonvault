@@ -6,3 +6,7 @@
 AI OS/Codebase/*/venv/
 AI OS/Codebase/*/.venv/
 AI OS/Codebase/*/.env
+AI OS/Codebase/*/__pycache__/
+AI OS/Codebase/*/**/__pycache__/
+AI OS/Codebase/obsidian-mine/runs/
+AI OS/Codebase/*/schema_notes.md

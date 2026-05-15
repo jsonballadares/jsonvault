@@ -1,6 +1,13 @@
 {
   "permissions": {
-    "allow": ["WebFetch", "WebSearch"],
+    "allow": [
+      "WebFetch",
+      "WebSearch",
+      "Bash(source \"AI OS/Codebase/Postgres Query/venv/bin/activate\" && python \"AI OS/Codebase/Postgres Query/query.py\" *)",
+      "Bash(cd \"AI OS/Codebase/obsidian-mine\" && venv/bin/python cli.py *)",
+      "Write(AI OS/Knowledge Base/**)",
+      "Edit(AI OS/Knowledge Base/**)"
+    ],
     "deny": []
   },
   "hooks": {
@@ -16,6 +23,24 @@
       }
     ],
     "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.command' | grep -qE '^source \"AI OS/Codebase/Postgres Query/venv/bin/activate\" && python \"AI OS/Codebase/Postgres Query/query.py\" --(schema|sql|csv)' && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"allow\",\"permissionDecisionReason\":\"query-db script auto-allowed\"}}' || echo '{}'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.command' | grep -qE '^cd \"AI OS/Codebase/obsidian-mine\" && venv/bin/python cli.py (explore|mine)( |$)' && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"allow\",\"permissionDecisionReason\":\"mine script auto-allowed\"}}' || echo '{}'"
+          }
+        ]
+      },
       {
         "matcher": "Read",
         "hooks": [

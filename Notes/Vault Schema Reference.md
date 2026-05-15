@@ -33,6 +33,7 @@ vault/
 │       │   ├── People/
 │       │   ├── Quotes/
 │		│	└── ...
+│       ├── Projects/
 │       ├── index.md
 │       └── log.md
 ├── Home.md.   # Entry point
@@ -45,7 +46,9 @@ vault/
 
 **AI OS/Knowledge Base/Sources/** — ingested material and subdivisions. Each source type gets its own subfolder. `Vault-Mining/` holds mining run outputs — what was analyzed, what patterns were found.
 
-**AI OS/Knowledge Base/Entities/** — cross-source extracted knowledge. Each entity type gets its own subfolder. Entity notes link back to source notes via (sources). Flat within each subfolder; `index.md` catalogs every KB page for agent navigation.
+**AI OS/Knowledge Base/Entities/** — distilled knowledge. Includes both cross-source extractions (mined from formal source material) and concepts born from first-party reasoning (planning conversations, agent-human collaboration, working sessions). Each entity type gets its own subfolder. Entity notes link back to whatever seeded them via (sources) when applicable — either KB source notes or vault notes. Flat within each subfolder; `index.md` catalogs every KB page for agent navigation.
+
+**AI OS/Knowledge Base/Projects/** — agent-authored project workspaces. One subfolder per project, each holding design docs, PRDs, proposals, or other project-scoped artifacts produced through agent sessions. Distinguished from main-vault project notes (`#project` tagged notes in `Notes/`) by scope: these are self-contained project workspaces, not nodes in the vault's idea graph.
 
 ## Statuses
 
@@ -95,7 +98,7 @@ Type is inferred from status, tags, fields, and folder — no explicit (type) fi
 
 **Source notes add:** (author), (year), (source), (chapters), (book), (chapter) as applicable.
 
-**Entity notes add:** (sources) (links to source notes), (role) (on people).
+**Entity notes add:** (sources) (optional — links to whatever seeded the concept: KB source notes, vault notes, or omitted entirely when the concept was distilled from direct reasoning with no cited material), (role) (on people).
 
 ## Entity Types
 

@@ -92,6 +92,14 @@ Read these wiki notes when you need specifics on conventions:
 | Human workflows | `Notes/Workflows Guide.md` |
 | Dataview query patterns | `Notes/Dataview Queries Reference.md` |
 
+## Local Repositories
+
+Add any local code repositories the agent should know about here so it can read them when answering questions. Example:
+
+| Repo | Local Path | Description |
+|---|---|---|
+| `my_project` | `~/Documents/dev/my_project` | One-line description |
+
 ## Common Operations
 
 Search for notes by status:
