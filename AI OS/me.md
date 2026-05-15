@@ -98,7 +98,7 @@ Add any local code repositories the agent should know about here so it can read 
 
 | Repo | Local Path | Description |
 |---|---|---|
-| `my_project` | `~/Documents/dev/my_project` | One-line description |
+| `jsonsite` | `~/Repos/jsonsite` | Personal resume/portfolio website — HTML/CSS/vanilla JS, zero dependencies |
 
 ## Common Operations
 

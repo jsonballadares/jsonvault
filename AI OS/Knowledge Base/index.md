@@ -21,6 +21,12 @@ _None yet._
 
 _None yet._
 
+## Projects
+
+| Note | Description |
+|---|---|
+| [[jsonsite]] | Personal resume/portfolio site — HTML/CSS/vanilla JS, zero dependencies |
+
 ## Sources
 
 _None yet._
