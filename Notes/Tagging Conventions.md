@@ -24,6 +24,7 @@ status:: #index
 | `#data-engineering` | Data pipelines, ETL, Spark, Hadoop, databases |
 | `#homelab` | Home server, self-hosting, Docker, networking |
 | `#programming` | General software development, coding |
+| `#algorithms` | Algorithm design, data structures, LeetCode, problem solving |
 | `#ai` | Artificial intelligence, machine learning, LLMs |
 | `#productivity` | Personal systems, workflows, time management |
 | `#health` | Physical health, mental health, wellness |
